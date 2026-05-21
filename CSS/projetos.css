@@ -83,7 +83,7 @@
 
 .prev:hover,
 .next:hover {
-    opacity: 0.3;
+    color: var(--azul-claro);
 }
 
 .prev { left: 25px; }

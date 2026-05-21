@@ -87,7 +87,7 @@
     }
 
     .container .p-devfront{
-        font-size: clamp(1.75rem, 3vw, 1.95rem);
+        font-size: clamp(1.95rem, 3vw, 2.15rem);
     }
 }
 
@@ -102,8 +102,11 @@
         font-size: clamp(2rem, 6vw, 3rem);
     }
 
-    .container p,
-    .container .p-devfront {
+    .container p{
         font-size: clamp(1rem, 3vw, 1.3rem);
+    }
+
+    .container .p-devfront {
+        font-size: clamp(1.5rem, 3vw, 1.8rem);
     }
 }

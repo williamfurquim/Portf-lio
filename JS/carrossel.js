@@ -36,20 +36,20 @@ function pauseAllVideos() {
 
 const projetos = [
     {
-        titulo: "ConnectPolo (projeto principal) 🏆",
-        descricao: "Sistema de gestão de treinamentos desenvolvido a partir de um problema real na Marcopolo. Substitui processos manuais via WhatsApp e planilhas por uma aplicação centralizada com autenticação, controle de acesso por perfil e organização de dados em tempo real. Foco em estruturação de regras de negócio, escalabilidade e confiabilidade das informações.",
+        titulo: "ConnectPolo",
+        descricao: "Plataforma full-stack de apoio e gestão para o treinamento de menores aprendizes. O foco do projeto foi centralizar informações dispersas, eliminando a dependência do WhatsApp e garantindo total rastreabilidade e auditoria para os líderes de montagem. Stack: Firebase • JavaScript • HTML5/CSS3 ",
         logo: "./img/icons/ConnectPolo.png",
         linkProjeto: "https://williamfurquim.github.io/ConnectPolo/"
     },
     {
         titulo: "Revise.e",
-        descricao: "API REST desenvolvida com arquitetura em camadas (Controller, Service, Repository), focada em organização e escalabilidade. Implementa autenticação via JWT, validação de dados e integração com PostgreSQL utilizando Prisma ORM. Demonstra domínio de backend estruturado e boas práticas de separação de responsabilidades.",
-        logo: "./img/icons/TasksCore.png",
+        descricao: "Aplicação full-stack de revisão ativa baseada em cards com omissão de palavras-chave. O foco do projeto foi construir uma arquitetura limpa e escalável, garantindo respostas rápidas na API e consistência na persistência de dados em nuvem. Stack: Node.js • TypeScript • Prisma ORM/banco Neon (PostgreSQL) • React • JavaScript • CSS3",
+        logo: "./img/icons/Revisee.png",
         linkProjeto: "https://revise-theta.vercel.app/"
     },
     {
         titulo: "Robótica",
-        descricao: "Interface web para monitoramento e controle de sensores em tempo real utilizando ESP32. Integra frontend com sistemas embarcados via comunicação Wi-Fi, abstraindo a complexidade do firmware em C++ através de uma interface acessível e responsiva.",
+        descricao: "Interface web para controle em tempo real de uma célula robótica. O projeto embarca um servidor HTTP estável no ESP32, utilizando lógica não-bloqueante para gerenciar sensores e atuadores simultaneamente sem travar o sistema. Stack: C/C++ (ESP32) • Arduino IDE • JavaScript • HTML5/CSS3",
         logo: "./img/icons/Robótica.png",
         linkProjeto: "https://github.com/williamfurquim/Projeto-de-robotica"
     }
@@ -77,11 +77,6 @@ function mostrarSlide(i) {
     const projeto = projetos[i];
     if (projeto) {
         titulo.textContent = projeto.titulo;
-        if (projeto.titulo.includes("ConnectPolo")) {
-            titulo.style.color = "#FFD700";
-        } else {
-            titulo.style.color = "var(--azul-claro)";
-        }
         descricao.textContent = projeto.descricao;
         logo.src = projeto.logo;
         logo.alt = `Logo do projeto ${projeto.titulo}`;
