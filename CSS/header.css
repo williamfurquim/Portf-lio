@@ -72,7 +72,7 @@ header {
     width: 0%;
     height: 2px;
     background: white;
-    transition: 0.3s;
+    transition: 0.15s;
 
 }
 
@@ -89,7 +89,7 @@ header {
     color: var(--azul-claro);
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .whatsapp-btn:hover {
@@ -113,6 +113,7 @@ header {
     height: 21px;
     /* Altura fixa para controlar o espaço entre as linhas */
     z-index: 100;
+    cursor: pointer;
 }
 
 .hamburger span {
@@ -120,7 +121,7 @@ header {
     height: 3px;
     background: white;
     border-radius: 2px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
     /* Transição suave para tudo */
     transform-origin: center;
     /* Origem no centro para um X simétrico */
@@ -175,7 +176,7 @@ header {
 
         transform: translateX(-100%);
         /* Começa fora da tela à esquerda */
-        transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        transition: transform 0.15s cubic-bezier(0.77, 0.2, 0.05, 1.0);
         display: flex !important;
         /* Deixe como flex, mas escondido pelo transform */
         visibility: hidden;

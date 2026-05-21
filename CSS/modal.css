@@ -64,15 +64,15 @@
 }
 
 .modal-text p {
-    text-align: justify; /* Texto justificado para parecer mais profissional */
+    text-align: left; /* Texto justificado para parecer mais profissional */
     line-height: 1.2;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: #eeeeee;
 }
 
 .destaque {
     color: var(--azul-claro);
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @keyframes zoomIn {

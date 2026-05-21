@@ -81,7 +81,7 @@ a {
     color: var(--azul-claro);
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .email-btn:hover {

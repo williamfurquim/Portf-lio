@@ -12,6 +12,8 @@ const prev = document.querySelector(".prev");
 const titulo = document.getElementById("projeto-titulo");
 const descricao = document.getElementById("projeto-descricao");
 const logo = document.getElementById("projeto-logo");
+const btnConhecer = document.getElementById("projeto-btnConhecer");
+
 
 let index = 0;
 
@@ -36,17 +38,20 @@ const projetos = [
     {
         titulo: "ConnectPolo (projeto principal) 🏆",
         descricao: "Sistema de gestão de treinamentos desenvolvido a partir de um problema real na Marcopolo. Substitui processos manuais via WhatsApp e planilhas por uma aplicação centralizada com autenticação, controle de acesso por perfil e organização de dados em tempo real. Foco em estruturação de regras de negócio, escalabilidade e confiabilidade das informações.",
-        logo: "./img/icons/ConnectPolo.png"
+        logo: "./img/icons/ConnectPolo.png",
+        linkProjeto: "https://williamfurquim.github.io/ConnectPolo/"
     },
     {
-        titulo: "TasksCore",
+        titulo: "Revise.e",
         descricao: "API REST desenvolvida com arquitetura em camadas (Controller, Service, Repository), focada em organização e escalabilidade. Implementa autenticação via JWT, validação de dados e integração com PostgreSQL utilizando Prisma ORM. Demonstra domínio de backend estruturado e boas práticas de separação de responsabilidades.",
-        logo: "./img/icons/TasksCore.png"
+        logo: "./img/icons/TasksCore.png",
+        linkProjeto: "https://revise-theta.vercel.app/"
     },
     {
         titulo: "Robótica",
         descricao: "Interface web para monitoramento e controle de sensores em tempo real utilizando ESP32. Integra frontend com sistemas embarcados via comunicação Wi-Fi, abstraindo a complexidade do firmware em C++ através de uma interface acessível e responsiva.",
-        logo: "./img/icons/Robótica.png"
+        logo: "./img/icons/Robótica.png",
+        linkProjeto: "https://github.com/williamfurquim/Projeto-de-robotica"
     }
 ];
 
@@ -73,13 +78,14 @@ function mostrarSlide(i) {
     if (projeto) {
         titulo.textContent = projeto.titulo;
         if (projeto.titulo.includes("ConnectPolo")) {
-            titulo.style.color = "#FFD700"; //
+            titulo.style.color = "#FFD700";
         } else {
             titulo.style.color = "var(--azul-claro)";
         }
         descricao.textContent = projeto.descricao;
         logo.src = projeto.logo;
         logo.alt = `Logo do projeto ${projeto.titulo}`;
+        btnConhecer.href = projeto.linkProjeto;
     }
 }
 
