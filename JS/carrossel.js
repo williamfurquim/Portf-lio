@@ -14,7 +14,6 @@ const descricao = document.getElementById("projeto-descricao");
 const logo = document.getElementById("projeto-logo");
 const btnConhecer = document.getElementById("projeto-btnConhecer");
 
-
 let index = 0;
 
 function loadVideo(video) {
@@ -36,16 +35,16 @@ function pauseAllVideos() {
 
 const projetos = [
     {
-        titulo: "ConnectPolo",
-        descricao: "Plataforma full-stack de apoio e gestão para o treinamento de menores aprendizes. O foco do projeto foi centralizar informações dispersas, eliminando a dependência do WhatsApp e garantindo total rastreabilidade e auditoria para os líderes de montagem. Stack: Firebase • JavaScript • HTML5/CSS3 ",
-        logo: "./img/icons/ConnectPolo.png",
-        linkProjeto: "https://williamfurquim.github.io/ConnectPolo/"
-    },
-    {
         titulo: "Revise.e",
         descricao: "Aplicação full-stack de revisão ativa baseada em cards com omissão de palavras-chave. O foco do projeto foi construir uma arquitetura limpa e escalável, garantindo respostas rápidas na API e consistência na persistência de dados em nuvem. Stack: Node.js • TypeScript • Prisma ORM/banco Neon (PostgreSQL) • React • JavaScript • CSS3",
         logo: "./img/icons/Revisee.png",
-        linkProjeto: "https://revise-theta.vercel.app/"
+        linkProjeto: "https://github.com/williamfurquim/Revise.e"
+    },
+    {
+        titulo: "ConnectPolo",
+        descricao: "Plataforma full-stack de apoio e gestão para o treinamento de menores aprendizes. O foco do projeto foi centralizar informações dispersas, eliminando a dependência do WhatsApp e garantindo total rastreabilidade e auditoria para os líderes de montagem. Stack: Firebase • JavaScript • HTML5/CSS3 ",
+        logo: "./img/icons/ConnectPolo.png",
+        linkProjeto: "https://github.com/williamfurquim/ConnectPolo"
     },
     {
         titulo: "Robótica",
@@ -62,7 +61,7 @@ function mostrarSlide(i) {
         if (idx === i) {
             slide.classList.add("active");
 
-            if (video && idx === i) {
+            if (video) {
                 loadVideo(video);
             }
         } else {
@@ -84,6 +83,7 @@ function mostrarSlide(i) {
     }
 }
 
+// Cliques dos botões (Apenas chamam a função de mostrar o slide)
 next.addEventListener("click", () => {
     index = (index + 1) % slides.length;
     mostrarSlide(index);
@@ -94,30 +94,12 @@ prev.addEventListener("click", () => {
     mostrarSlide(index);
 });
 
-let isUserInteracting = false;
-
-[next, prev].forEach(btn => {
-    btn.addEventListener("click", () => {
-        isUserInteracting = true;
-        clearInterval(autoSlide);
-    });
-});
-
-let autoSlide = setInterval(() => {
-    const currentVideo = slides[index].querySelector("video");
-
-    if (!isUserInteracting && (!currentVideo || currentVideo.paused)) {
-        index = (index + 1) % slides.length;
-        mostrarSlide(index);
-    }
-}, 8000);
-
+// Controle de reprodução dos vídeos ao clicar neles
 document.querySelectorAll(".slide video").forEach(video => {
     video.addEventListener("click", () => {
-
         const isPlaying = !video.paused;
 
-        pauseAllVideos(); // limpa tudo
+        pauseAllVideos(); // Limpa e reseta os outros vídeos
 
         loadVideo(video);
 
@@ -127,4 +109,5 @@ document.querySelectorAll(".slide video").forEach(video => {
     });
 });
 
+// Inicializa o primeiro slide ao carregar a página
 mostrarSlide(index);
