@@ -36,7 +36,13 @@ header {
     animation-delay: 0.3s;
 }
 
-.nav-links.active ul li:nth-child(4) { animation-delay: 0.4s; } /* Este faltava */
+.nav-links.active ul li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.nav-links.active ul li:nth-child(5) {
+    animation-delay: 0.3s;
+}
 
 @keyframes fadeInMenu {
     from {
@@ -142,8 +148,6 @@ header {
     }
 }
 
-
-
 /* Mobile */
 @media screen and (max-width: 768px) {
     header {
@@ -163,7 +167,7 @@ header {
         /* Ocupa metade da largura */
         height: 100vh;
         /* Ocupa a altura total da janela */
-        background:   rgba(11, 184, 227, 0.578);
+        background: rgba(11, 184, 227, 0.578);
         backdrop-filter: blur(10px);
         flex-direction: column;
         justify-content: center;
@@ -189,7 +193,7 @@ header {
 
     .nav-links ul li {
         opacity: 0;
-        transform: translateY(20px);       
+        transform: translateY(20px);
     }
 
 
@@ -209,6 +213,10 @@ header {
 
     .nav-links.active ul li:nth-child(3) {
         animation-delay: 0.3s;
+    }
+
+    .nav-links.active ul li:nth-child(5) {
+        animation-delay: 0.5s;
     }
 
     .nav-links a {
