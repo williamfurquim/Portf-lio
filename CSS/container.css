@@ -25,12 +25,12 @@
 }
 
 .nome-animado {
-    background: linear-gradient(270deg, #0bb8e3, #7c3aed, #22c55e, #0bb8e3);
+    background: linear-gradient(270deg, #0bb8e3, #8347ec, #22c55e, #0bb8e3);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: azulAnimado 8s ease infinite;
+    animation: azulAnimado 6s ease infinite;
 }
 
 @keyframes azulAnimado {
